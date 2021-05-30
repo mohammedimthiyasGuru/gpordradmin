@@ -170,7 +170,7 @@
 </div>
 
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-6">
 
     <div class="form-group row">
@@ -210,9 +210,9 @@
             </div>
           </div>
          </div>
-</div>
+</div> -->
 
-<div class="row">
+<!-- <div class="row">
   <div class="col-md-6">
 
 
@@ -283,24 +283,16 @@
               </div>
              </div>
          </div>
-</div>
+</div> -->
 
 
-
-          <!-- <div class="form-group row">
-            <label class="col-lg-3 col-form-label">Service Time :</label>
-            <div class="col-lg-6">
-                <input type="email" class="form-control"  name="title" value="" [(ngModel)]="cat_time_service" placeholder="Service Time">
-                <span class="form-text text-muted">Please enter your Service Time</span>
-            </div>
-        </div> -->
                 </div>
             </div>
             <div class="card-footer">
               <div class="row">
                   <div class="col-lg-3"></div>
                   <div class="col-lg-6">
-                      <button *ngIf ='update_button == false' (click)="Creat_item()" class="btn btn-success mr-2">Save</button>
+                      <button *ngIf ='update_button == false && button_visible ==  true' (click)="Creat_item()" class="btn btn-success mr-2">Save</button>
                       <button *ngIf ='update_button == true' (click)="editaction()" class="btn btn-success mr-2">Update</button>
                   </div>
               </div>
@@ -483,7 +475,7 @@
                                <td class="datatable-cell-left datatable-cell" data-field="Actions" data-autohide-disabled="false" aria-label="null">
                                   <span style="overflow: visible; position: relative; width: 125px;">
                                     <div class="dropdown dropdown-inline">
-                                      <a href="javascript:;" class="btn btn-sm btn-clean btn-icon mr-2" data-toggle="dropdown">
+                                      <a (click)="AddExpenvies(item)" class="btn btn-sm btn-clean btn-icon mr-2" data-toggle="dropdown">
                                          <span class="svg-icon svg-icon-md">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -493,16 +485,7 @@
                                             </svg>
                                          </span>
                                       </a>
-                                      <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                                         <ul class="navi flex-column navi-hover py-2">
-                                            <li class="navi-item">                                    <a (click)="AddExpenvies(item)" class="navi-link">                                        <span class="navi-icon"><i class="la la-file-pdf-o"></i></span>                        <span class="navi-text">Add Expensive</span>                                    </a>                                </li>
-                                         </ul>
-                                      </div>
                                    </div>
-
-
-
-
                                    <!-- <a  class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details" >
                                     <span class="svg-icon svg-icon-md" (click)="edititems(item)">
                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">

@@ -21,6 +21,7 @@ export class ItemsComponent implements OnInit {
   item_id = "";
   selectedAudio1 : any;
 
+  button_visible : boolean = true;
 
 
   item_list :  any;
@@ -226,7 +227,7 @@ this._api.item_delete(a).subscribe(
 
 
   Creat_item(){
-
+     this.button_visible = false;
     if(this.item_day_setting == 'manually'){
       this.item_day_setting_arr = [];
       for(let a = 0 ; a < this.item_day_setting_arr1.length ; a++){
@@ -325,8 +326,8 @@ this._api.item_delete(a).subscribe(
            //  this.userList = response.Data;
            //  console.log(this.userList);
            this.toastr.clear();
-           this.toastr.success("Item Added Successfully")
-
+           this.toastr.success("Item Added Successfully");
+           this.button_visible = true;
            this.ngOnInit();
            this.cart_type= "";
            this.item_title= "";
@@ -349,6 +350,7 @@ this._api.item_delete(a).subscribe(
          );
 
     }
+    this.button_visible = true;
 
   }
 

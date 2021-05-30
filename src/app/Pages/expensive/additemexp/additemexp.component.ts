@@ -125,6 +125,7 @@ export class AdditemexpComponent implements OnInit {
     console.log(datas);
     for(let a = 0 ; a < this.banner_list.length; a++){
       if(this.banner_list[a].Stock_name == datas){
+        console.log(this.banner_list[a].Stock_qtn_type);
         this.QuantityType = this.banner_list[a].Stock_qtn_type;
         this.expensive_id = this.banner_list[a]._id;
       }

@@ -63,11 +63,10 @@ export class ViewSingleOrderComponent implements OnInit {
      this._api.orders_update(a).subscribe(
       (response: any) => {
         console.log(response.Data);
-        this.storage.local.set('order_details',response.Data);
+        // this.storage.local.set('order_details',response.Data);
         this.toastr.clear();
         this.toastr.success("Status Updated")
-     
-        this.ngOnInit();
+        this.router.navigateByUrl('/ordr/vendor/orderlist');
       }
     );
 

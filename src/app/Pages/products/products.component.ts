@@ -552,7 +552,7 @@ Save_Cat(){
         this.ngOnInit();
         this.cat_title = '';
         this.cat_descri = '';
-        this.cat_image_path = 'http://54.212.108.156:3000/api/uploads/1615202125189.jpg';
+        this.cat_image_path = 'http://54.212.108.156:3000/api/uploads/1615202125189.jpeg';
         this.cat_show_status = true;
         this.cat_day_setting_arr =  ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
         this.cat_day_setting_arr1 =  ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
@@ -650,7 +650,7 @@ Update_Cat_action(){
         this.ngOnInit();
         this.cat_title = '';
         this.cat_descri = '';
-        this.cat_image_path = 'http://54.212.108.156:3000/api/uploads/1615202125189.jpg';
+        this.cat_image_path = 'http://54.212.108.156:3000/api/uploads/1615202125189.jpeg';
         this.cat_show_status = true;
         this.cat_day_setting_arr = [];
         this.cat_day_setting_arr1 = [];

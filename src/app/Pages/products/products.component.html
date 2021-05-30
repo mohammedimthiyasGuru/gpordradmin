@@ -317,7 +317,7 @@
               </div>
            </div>
 
-            <div class="form-group row">
+            <!-- <div class="form-group row">
               <label class="col-lg-3 col-form-label">Select Day :</label>
               <div class="col-lg-6">
                   <select class="form-control form-control-solid" name="cat_day_setting" value="" [(ngModel)]="cat_day_setting" (change)="onchangeday($event.target.value)">
@@ -328,10 +328,10 @@
                    </select>
                   <span class="form-text text-muted">Please selet your days</span>
               </div>
-          </div>
+          </div> -->
 
 
-          <div class="form-group row"  *ngIf="daysboolean  == 'false'">
+          <!-- <div class="form-group row"  *ngIf="daysboolean  == 'false'">
             <label class="col-lg-3 col-form-label">Select Day :</label>
             <div class="col-lg-6">
               <input type="checkbox" id="cmon" name="cmon" [(ngModel)]="cmon" value="" (change)="onsingleday($event.target.value,1)">
@@ -350,10 +350,10 @@
               <label for="Sunday">Sunday</label><br>
                 <span class="form-text text-muted">Please selet your days</span>
             </div>
-          </div>
+          </div> -->
 
 
-          <div class="form-group row">
+          <!-- <div class="form-group row">
             <label class="col-lg-3 col-form-label">Select Start Time :</label>
             <div class="col-lg-6">
                 <select class="form-control form-control-solid" name="cat_time_start" value="" [(ngModel)]="cat_time_start">
@@ -385,9 +385,9 @@
                  </select>
                 <span class="form-text text-muted">Please selet your Start Time</span>
             </div>
-           </div>
+           </div> -->
 
-           <div class="form-group row">
+           <!-- <div class="form-group row">
             <label class="col-lg-3 col-form-label">Select End Time :</label>
             <div class="col-lg-6">
                 <select class="form-control form-control-solid" name="cat_time_end" value="" (change)="endtimes($event.target.value)"  [(ngModel)]="cat_time_end">
@@ -419,7 +419,7 @@
                  </select>
                 <span class="form-text text-muted">Please selet your End Time</span>
             </div>
-           </div>
+           </div> -->
 
           <!-- <div class="form-group row">
             <label class="col-lg-3 col-form-label">Service Time :</label>
@@ -605,7 +605,7 @@
                                   <span style="overflow: visible; position: relative; width: 125px;">
 
                                     <div class="dropdown dropdown-inline">
-                                      <a href="javascript:;" class="btn btn-sm btn-clean btn-icon mr-2" data-toggle="dropdown">
+                                      <a href="/#/ordr/items/{{item._id}}"  class="btn btn-sm btn-clean btn-icon mr-2" data-toggle="dropdown">
                                          <span class="svg-icon svg-icon-md">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -615,14 +615,14 @@
                                             </svg>
                                          </span>
                                       </a>
-                                      <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                                      <!-- <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
                                          <ul class="navi flex-column navi-hover py-2">
-                                            <li class="navi-item">     <a href="/#/ordr/items/{{item._id}}" class="navi-link">
+                                            <li class="navi-item"> <a href="/#/ordr/items/{{item._id}}" class="navi-link">
                                                  <span class="navi-icon">    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
                                                     <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                                                   </svg></span>                        <span class="navi-text">Add Items</span>                                    </a>                                </li>
                                          </ul>
-                                      </div>
+                                      </div> -->
                                    </div>
 
 
