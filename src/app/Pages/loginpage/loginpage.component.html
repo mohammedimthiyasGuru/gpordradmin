@@ -1,0 +1,45 @@
+<div class="d-flex flex-column flex-root">
+  <!--begin::Login-->
+  <div class="" id="kt_login">
+    <div class="container-fluid" style="background-image: url(assets/media/bg/bg-2.jpg);object-fit: cover; min-height:100vh;">
+      <div class="row justify-content-center align-self-center" style="min-height:93vh;">
+	  	<div class="col-lg-3 col-md-5 align-self-center" >
+        <div class="text-center">
+          <a href="#">
+            <img src="{{vendor_details.shop_logo}}" class="max-h-75px user-top" alt="" />
+          </a>
+        </div>
+        <!--end::Login Header-->
+        <!--begin::Login Sign in form-->
+        <div class="login-signin">
+          <div class="mb-20 text-center">
+            <h3 class="opacity-40 font-weight-normal text-white">Sign In To {{vendor_details.shop_name}}</h3>
+            <p class="opacity-40 text-white">Enter your details to login to your account:</p>
+          </div>
+          <form class="form">
+            <div class="form-group">
+              <input class="form-control h-auto text-white bg-white-o-5 rounded-pill border-0 py-4 px-8" type="text"  placeholder="Email" name="username" [(ngModel)]="email_id" autocomplete="off" />
+            </div>
+            <div class="form-group">
+              <input class="form-control h-auto text-white bg-white-o-5 rounded-pill border-0 py-4 px-8" type="password" placeholder="Password" [(ngModel)]="password" name="password" />
+            </div>
+            <div class="form-group d-flex flex-wrap justify-content-between align-items-center opacity-60">
+              <label class="checkbox checkbox-outline checkbox-white text-white m-0">
+              <input type="checkbox" name="remember" />Remember me
+              <span></span></label>
+              <a href="/#/ordr/forgotpassword" id="kt_login_forgot" class="text-white font-weight-bold">Forget Password ?</a>
+            </div>
+            <div class="form-group text-center mt-10">
+              <button  (click)="login()" id="kt_login_signin_submit" class="btn btn-pill btn-primary opacity-90 px-15 py-3">Sign In</button>
+            </div>
+          </form>
+          <!-- <div class="mt-10">
+            <span class="opacity-40 mr-4">Don't have an account yet?</span>
+            <a href="/#/signup" id="kt_login_signup" class="text-white opacity-30 font-weight-normal">Sign Up</a>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--end::Login-->
+</div>

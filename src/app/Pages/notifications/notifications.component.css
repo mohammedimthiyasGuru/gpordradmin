@@ -1,0 +1,41 @@
+.brand-logo {
+    color:black;
+  }
+
+  a.notif {
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 50px;
+    background: url('http://i.imgur.com/evpC48G.png');
+    background-size: contain;
+    text-decoration: none;
+  }
+  .num {
+    position: absolute;
+    right: 11px;
+    top: 6px;
+    color: #fff;
+  }
+
+
+ .notifiation_list {
+  position: absolute;
+  will-change: transform;
+  top: 0px;
+  left: 0px;
+  transform: translate3d(-275px, 50px, 0px) !important;
+}
+
+.not-notification {
+  width: 40vw!important;
+}
+
+  .btn.btn-fail {
+    color: #ffffff;
+    background-color: #e75656;
+    padding: 10px 55px;
+    white-space: nowrap;
+    border-color: #e75656;
+    margin-left: 1 px;
+}

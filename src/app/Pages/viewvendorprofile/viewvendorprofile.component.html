@@ -1,0 +1,119 @@
+
+<div class="container" style="min-height:95vh;">
+<div class="row pt-6 pt-lg-10" >
+<div class="col-lg-6">
+  <!--begin::Card-->
+  <div class="card card-custom gutter-b example example-compact">
+      <div class="card-header">
+          <h3 class="card-title">View Restaurant Details</h3>
+      </div>
+      <!--begin::Form-->
+      <form class="form">
+          <div class="card-body custom-hi">
+              <h3 class="font-size-lg text-dark font-weight-bold mb-6">1. Restaurant Info:</h3>
+              <div class="mb-15">
+                  <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">Restaurant Name:</label>
+                      <div class="col-lg-6">
+                        <div class="form-control" >{{shop_name}}</div>
+
+                      </div>
+                  </div>
+
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label">Restaurant Link:</label>
+                    <div class="col-lg-6">
+                      <div class="form-control" >{{shop_name}}</div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label">Restaurant Logo:</label>
+                  <div class="col-lg-6">
+                     <img src="{{shoplogo}}" style="width: 100px;height: 100px;"
+                        alt="" />
+                  </div>
+               </div>
+
+
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label">Address :</label>
+              <div class="col-lg-6">
+                <div class="form-control" style="height: 60px;">{{address}}</div>
+              </div>
+            </div>
+
+
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label">Contact No:</label>
+              <div class="col-lg-6">
+                <div class="form-control" >{{shop_number}}</div>
+              </div>
+            </div>
+              </div>
+          </div>
+
+      </form>
+  </div>
+</div>
+
+<div class="col-lg-6">
+  <!--begin::Card-->
+  <div class="card card-custom gutter-b example example-compact">
+      <div class="card-header">
+          <h3 class="card-title">Adding Vendor Person Details</h3>
+      </div>
+      <!--begin::Form-->
+      <form class="form">
+          <div class="card-body custom-hi">
+              <h3 class="font-size-lg text-dark font-weight-bold mb-6">2.Person Info:</h3>
+              <div class="mb-15">
+
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label">Admin Link:</label>
+                  <div class="col-lg-6">
+                    <div class="form-control"  style="height: 60px;">{{admin_link}}</div>
+                  </div>
+              </div>
+
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label">Admin Email:</label>
+                  <div class="col-lg-6">
+                    <div class="form-control" >{{vendor_email}}</div>
+                  </div>
+               </div>
+
+               <div class="form-group row">
+                <label class="col-lg-3 col-form-label">Admin Password:</label>
+                <div class="col-lg-6">
+                  <div class="form-control" >{{vendor_password}}</div>
+                </div>
+              </div>
+
+               <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">User name:</label>
+                      <div class="col-lg-6">
+                        <div class="form-control" >{{vendor_name}}</div>
+                      </div>
+                  </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label">Phone Number:</label>
+                    <div class="col-lg-6">
+                      <div class="form-control" >{{vendor_phone}}</div>
+                    </div>
+                </div>
+               <div class="form-group row">
+                <label class="col-lg-3 col-form-label">Docs:</label>
+                <div class="col-lg-6">
+                    <img src="{{person_doc}}" style="width: 35px;height: 35px;"
+                      alt="" />
+                </div>
+             </div>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
+</div>
+</div>
+

@@ -1,0 +1,14 @@
+
+
+.btn.btn-success {
+  color: #ffffff;
+  background-color: #1BC5BD;
+  border-color: #1BC5BD;
+}
+
+
+.btn.btn-fail {
+  color: #ffffff;
+  background-color: #dcdcdc;
+  border-color: #dcdcdc;
+}

@@ -1,0 +1,76 @@
+
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+  <!--begin::Entry-->
+  <div class="d-flex flex-column-fluid">
+      <!--begin::Container-->
+      <div class="container pt-6 pt-lg-10">
+          <!--begin::Example-->
+          <!--begin::Row-->
+          <div class="row">
+            <ng-container *ngFor="let item of orderlist; let i = index;">
+              <div class="col-lg-6 col-xl-4 mb-5" (click)="openorders(item)">
+                  <!--begin::Card-->
+                  <div class="card card-custom card-stretch">
+                      <div class="card-header cus pl-4">
+                          <div class="card-title cus">
+                              <h6 class="card-label cus left">Order Number:</h6>
+                              <h1 class="card-label cus right">#{{item.Booking_id}}</h1>
+                          </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="cus-det pt-4">
+                          <h6 class="d-inline-block pr-2">Table No : </h6>
+                          <h6 class="right d-inline-block">{{item.table_number}}</h6>
+                        </div>
+                          <div class="cus-det pt-4">
+                              <h6 class="d-inline-block pr-2">Customer Details:</h6>
+                              <h6 class="right d-inline-block">{{item.Customer_id.Customer_name}} - {{item.Customer_id.Customer_phone}}</h6>
+                          </div>
+                          <div class="order-det mt-3 mb-0">
+                            <h6>Order Details:</h6>
+							<table class="table mb-0">
+								<thead>
+									<tr>
+										<th class="pl-0">Item Title</th>
+										<th>Item Desc</th>
+										<th>Item Quantity</th>
+									</tr>
+								</thead>
+								<ng-container *ngFor="let items of item.Item_detals[0].Data; let i = index;">
+								<tbody>
+									<tr>
+										<td  class="pl-0">{{items.Item_id.item_title}}</td>
+										<td>{{items.Item_id.item_descri}}</td>
+										<td>{{items.quantity}}</td>
+									</tr>
+								</tbody>
+								</ng-container>
+							</table>
+
+                          </div>
+						  <div class="row mt-2">
+						  	<div class="col-6 time-dur pl-0">
+                              <h6>Booking Date:</h6>
+                              <h6 class="right">{{item.booking_date | date:'yyyy-MM-dd HH:MM a' }}</h6>
+                          </div>
+                          <div class="col-6 time-dur">
+                            <h6>Order Status:</h6>
+                            <h6 class="right">{{item.order_status}}</h6>
+                        </div>
+						  </div>
+                      </div>
+                  </div>
+                  <!--end::Card-->
+              </div>
+              </ng-container>
+          </div>
+          <!--end::Row-->
+          <!--end::Example-->
+      </div>
+      <!--end::Container-->
+  </div>
+  <!--end::Entry-->
+</div>
+
+

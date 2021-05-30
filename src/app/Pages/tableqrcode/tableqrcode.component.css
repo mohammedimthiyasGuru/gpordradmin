@@ -1,0 +1,20 @@
+.btn.btn-success {
+  color: #ffffff;
+  background-color: #1BC5BD;
+  padding: 10px 30px !important;
+  white-space: nowrap;
+  border-color: #1BC5BD;
+}
+
+.btn-fail {
+  color: #ffffff;
+  float: left;
+  background-color: #e55555;
+  padding: 10px 30px !important;
+  white-space: nowrap;
+  border-color: #e55555;
+}
+
+.qrcode img {
+  width: 235px !important;
+}

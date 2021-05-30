@@ -1,0 +1,135 @@
+
+
+            <div class="container" style="min-height:95vh;">
+<div class="row mt-lg-10 mt-6">
+<div class="col-lg-6">
+  <!--begin::Card-->
+  <div class="card card-custom gutter-b example example-compact">
+      <div class="card-header">
+          <h3 class="card-title">Editing Restaurant Details</h3>
+      </div>
+      <!--begin::Form-->
+      <form class="form">
+          <div class="card-body pb-0">
+              <h3 class="font-size-lg text-dark font-weight-bold mb-6">1. Restaurant Info:</h3>
+              <div class="mb-15">
+                  <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">Restaurant Name:</label>
+                      <div class="col-lg-6">
+                          <input type="email" class="form-control" name="shop_name" value="" (input)="onSearchChange($event.target.value)" [(ngModel)]="shop_name"  placeholder="Restaurant Name">
+                          <span class="form-text text-muted">Please enter your Restaurant Name</span>
+                      </div>
+                  </div>
+
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label">Restaurant Link:</label>
+                    <div class="col-lg-6">
+                        <input type="email" class="form-control" name="show_link" value="" disabled [(ngModel)]="show_link" placeholder="Restaurant Link">
+                        <span class="form-text text-muted">Please enter your Restaurant Link</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label">Restaurant Logo:</label>
+                  <div class="col-lg-6">
+                      <input type="file" (change)="fileupload1($event)" accept="image/*" class="form-control" name="" value="" placeholder="Enter full name">
+                      <span class="form-text text-muted"><img src="{{shoplogo}}" style="width: 35px;height: 35px;"
+                        alt="" /></span>
+                        <span class="form-text text-muted">512 × 512</span>
+                  </div>
+               </div>
+
+
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label">Address :</label>
+              <div class="col-lg-6">
+                  <textarea type="email" class="form-control" name="address" value="" [(ngModel)]="address" placeholder="Address"></textarea>
+                  <span class="form-text text-muted">Please enter your full address</span>
+              </div>
+            </div>
+
+
+            <div class="form-group row">
+              <label class="col-lg-3 col-form-label">Contact No:</label>
+              <div class="col-lg-6">
+                  <input type="number" class="form-control" name="shop_number" value="" [(ngModel)]="shop_number" placeholder="Contact No">
+                  <span class="form-text text-muted">Please enter your Contact No</span>
+              </div>
+            </div>
+              </div>
+          </div>
+
+      </form>
+  </div>
+</div>
+
+<div class="col-lg-6">
+  <!--begin::Card-->
+  <div class="card card-custom gutter-b example example-compact">
+      <div class="card-header">
+          <h3 class="card-title">Editing Vendor Person Details</h3>
+      </div>
+      <!--begin::Form-->
+      <form class="form">
+          <div class="card-body pb-0 custom-hi">
+              <h3 class="font-size-lg text-dark font-weight-bold mb-6">2. Person Info:</h3>
+              <div class="mb-15">
+
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label">Admin Email:</label>
+                  <div class="col-lg-6">
+                      <input type="email" class="form-control"  name="vendor_email" value="" [(ngModel)]="vendor_email" placeholder="Admin Email">
+                      <span class="form-text text-muted">Please enter your Admin Email</span>
+                  </div>
+               </div>
+
+               <div class="form-group row">
+                <label class="col-lg-3 col-form-label">Admin Password:</label>
+                <div class="col-lg-6">
+                    <input type="email" class="form-control"   name="vendor_password" value="" [(ngModel)]="vendor_password" placeholder="Admin Password">
+                    <span class="form-text text-muted">Please enter your Admin Password</span>
+                </div>
+              </div>
+
+               <div class="form-group row">
+                      <label class="col-lg-3 col-form-label">User name:</label>
+                      <div class="col-lg-6">
+                          <input type="email" class="form-control"  name="vendor_name" value="" [(ngModel)]="vendor_name" placeholder="User name">
+                          <span class="form-text text-muted">Please enter your User name</span>
+                      </div>
+                  </div>
+
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label">Phone Number:</label>
+                    <div class="col-lg-6">
+                        <input type="number" class="form-control"  name="vendor_phone" value="" [(ngModel)]="vendor_phone" placeholder="Phone Number">
+                        <span class="form-text text-muted">Please enter your Phone Number</span>
+                    </div>
+                </div>
+
+
+               <div class="form-group row">
+                <label class="col-lg-3 col-form-label">Docs:</label>
+                <div class="col-lg-6">
+                    <input type="file" class="form-control" (change)="fileupload2($event)" name="shop_number"  value="" placeholder="Enter full name">
+                    <span class="form-text text-muted"><img src="{{person_doc}}" style="width: 35px;height: 35px;"
+                      alt="" /></span>
+                </div>
+             </div>
+              </div>
+          </div>
+
+      </form>
+  </div>
+</div>
+</div>
+<div class="">
+    <div class="row justify-content-center">
+        <div class="col-lg-12 text-lg-center mb-5 mb-lg-0">
+            <button (click)="Save2()" class="btn btn-success">Save</button>
+            <!-- <button (click)="Reset2()" class="btn btn-secondary">Reset</button> -->
+        </div>
+    </div>
+</div>
+</div>
+

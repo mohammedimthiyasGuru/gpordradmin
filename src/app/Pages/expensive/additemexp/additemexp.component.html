@@ -1,0 +1,289 @@
+<div id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+  <!--begin::Main-->
+<app-header></app-header>
+  <div class="d-flex flex-column flex-root">
+      <!--begin::Page-->
+      <div class="d-flex flex-row flex-column-fluid page" style="min-height:97vh">
+          <!--begin::Aside-->
+          <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside" >
+              <app-sidemenu></app-sidemenu>
+          </div>
+          <!--end::Aside-->
+          <!--begin::Wrapper-->
+          <div class="d-flex flex-column flex-row-fluid wrapper rgcont" id="kt_wrapper" >
+              <!--begin::Content-->
+
+
+
+ <div class="container">
+  <div class="row">
+  <div class="col-lg-12 p-0 pt-6 pt-lg-10">
+    <!--begin::Card-->
+    <div class="card card-custom gutter-b example example-compact">
+        <div class="card-header">
+            <h3 class="card-title">{{itemsdetails.item_title}} (Expensive)</h3>
+        </div>
+        <!--begin::Form-->
+        <form class="form">
+            <div class="card-body">
+                <div class="mb-15">
+                  <div class="form-group row">
+                    <label class="col-lg-3 col-form-label">Title :</label>
+                    <div class="col-lg-6">
+                      <select class="form-control form-control-solid" value="" name="Title" value="" (input)="onSearchChange1($event.target.value)" [(ngModel)]="Title">
+                        <ng-container *ngFor="let item of banner_list">
+                        <option value="{{item.Stock_name}}">{{item.Stock_name}}</option>
+                      </ng-container>
+                      </select>
+                        <span class="form-text text-muted">Please enter your Title</span>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="col-lg-3 col-form-label">Quantity Type :</label>
+                  <div class="col-lg-6">
+                    <select class="form-control form-control-solid"  disabled value="" name="QuantityType" value="" [(ngModel)]="QuantityType">
+                      <option value="Kgs">Kgs</option>
+                      <option value="Nos">Nos</option>
+                     </select>
+                      <span class="form-text text-muted">Please enter your Quantity Type</span>
+                  </div>
+              </div>
+
+
+              <!-- <div class="form-group row">
+                <label class="col-lg-3 col-form-label">Total :</label>
+                <div class="col-lg-6">
+                    <input type="number" class="form-control" disabled  name="Total" value="" [(ngModel)]="Total" (input)="onSearchChange($event.target.value)" placeholder="Banner Title">
+                    <span class="form-text text-muted">Please enter your Total</span>
+                </div>
+             </div> -->
+
+
+             <div class="form-group row">
+              <label class="col-lg-3 col-form-label">Spend :</label>
+              <div class="col-lg-6">
+                  <input type="number" class="form-control"  name="Spended" value=""  [(ngModel)]="Spended"  placeholder="Banner Title">
+                  <span class="form-text text-muted">Please enter your Spended</span>
+              </div>
+           </div>
+
+           <!-- <div class="form-group row">
+            <label class="col-lg-3 col-form-label">Balance :</label>
+            <div class="col-lg-6">
+                <input type="number" class="form-control" disabled disabled  name="Balance" value="" [(ngModel)]="Balance"  placeholder="Banner Title">
+                <span class="form-text text-muted">Please enter your Balance</span>
+            </div>
+         </div> -->
+                </div>
+            </div>
+            <div class="card-footer">
+              <div class="row" >
+                  <div class="col-lg-3"></div>
+                  <div class="col-lg-6">
+                      <button *ngIf="toggle_button == true" (click) = "addexpensive()" class="btn btn-success mr-2">Save</button>
+                      <button *ngIf="toggle_button == false"  (click) = "editexpensive_action()" class="btn btn-success mr-2">Update</button>
+                  </div>
+              </div>
+          </div>
+        </form>
+    </div>
+  </div>
+  </div>
+  </div>
+
+<div class="content d-flex flex-column flex-column-fluid pt-0" id="kt_content">
+  <!--begin::Entry-->
+  <div class="d-flex flex-column-fluid">
+      <!--begin::Container-->
+      <div class="container pt-0">
+          <!--begin::Card-->
+          <div class="card card-custom gutter-b">
+              <div class="card-header flex-wrap border-0 pt-6 pb-0">
+                  <div class="card-title">
+                      <h3 class="card-label">Expensive List
+                      <span class="d-block text-muted pt-2 font-size-sm">Expensive count </span></h3>
+                  </div>
+                  <div class="card-toolbar">
+                      <!--begin::Dropdown-->
+                      <div class="dropdown dropdown-inline mr-2">
+                          <button type="button" class="btn btn-light-primary font-weight-bolder dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Export</button>
+                          <!--begin::Dropdown Menu-->
+                          <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                              <!--begin::Navigation-->
+                              <ul class="navi flex-column navi-hover py-2">
+                                  <li class="navi-header font-weight-bolder text-uppercase font-size-sm text-primary pb-2">Choose an option:</li>
+                                  <li class="navi-item">
+                                      <a href="#" class="navi-link">
+                                          <span class="navi-icon">
+                                              <i class="la la-print"></i>
+                                          </span>
+                                          <span class="navi-text">Print</span>
+                                      </a>
+                                  </li>
+                                  <li class="navi-item">
+                                      <a href="#" class="navi-link">
+                                          <span class="navi-icon">
+                                              <i class="la la-copy"></i>
+                                          </span>
+                                          <span class="navi-text">Copy</span>
+                                      </a>
+                                  </li>
+                                  <li class="navi-item">
+                                      <a href="#" class="navi-link">
+                                          <span class="navi-icon">
+                                              <i class="la la-file-excel-o"></i>
+                                          </span>
+                                          <span class="navi-text">Excel</span>
+                                      </a>
+                                  </li>
+                                  <li class="navi-item">
+                                      <a href="#" class="navi-link">
+                                          <span class="navi-icon">
+                                              <i class="la la-file-text-o"></i>
+                                          </span>
+                                          <span class="navi-text">CSV</span>
+                                      </a>
+                                  </li>
+                                  <li class="navi-item">
+                                      <a href="#" class="navi-link">
+                                          <span class="navi-icon">
+                                              <i class="la la-file-pdf-o"></i>
+                                          </span>
+                                          <span class="navi-text">PDF</span>
+                                      </a>
+                                  </li>
+                              </ul>
+                              <!--end::Navigation-->
+                          </div>
+                          <!--end::Dropdown Menu-->
+                      </div>
+                      <!--end::Dropdown-->
+                      <!--begin::Button-->
+                      <!-- <a href="#" class="btn cus-btn active font-weight-bolder">Add New Items</a> -->
+                      <!--end::Button-->
+                  </div>
+              </div>
+
+
+              <div class="card-body pb-5">
+                  <div class="mb-7">
+                      <div class="row align-items-center">
+                          <div class="col-lg-9 col-xl-8">
+                              <div class="row align-items-center">
+                                  <div class="col-md-4 my-2 my-md-0 p-0 pr-lg-2">
+                                      <div class="input-icon">
+                                          <input type="text" class="form-control" placeholder="Search..." id="kt_datatable_search_query">
+                                          <span>
+                                              <i class="flaticon2-search-1 text-muted"></i>
+                                          </span>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 my-2 my-md-0 p-0 p-sm-2">
+                                      <div class="d-flex align-items-center">
+                                          <label class="mr-3 mb-0 d-none d-md-block">Status:</label>
+                                          <div class="dropdown bootstrap-select form-control"><select class="form-control" id="kt_datatable_search_status" tabindex="-98">
+                                              <option value="">All</option>
+                                              <option value="1">Pending</option>
+                                              <option value="2">Delivered</option>
+                                              <option value="3">Canceled</option>
+                                              <option value="4">Success</option>
+                                              <option value="5">Info</option>
+                                              <option value="6">Danger</option>
+                                          </select><button type="button" class="btn dropdown-toggle btn-light bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" data-id="kt_datatable_search_status" title="All"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">All</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-1" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 my-2 my-md-0 p-0 p-sm-2">
+                                      <div class="d-flex align-items-center">
+                                          <label class="mr-3 mb-0 d-none d-md-block">Type:</label>
+                                          <div class="dropdown bootstrap-select form-control"><select class="form-control" id="kt_datatable_search_type" tabindex="-98">
+                                              <option value="">All</option>
+                                              <option value="1">Online</option>
+                                              <option value="2">Retail</option>
+                                              <option value="3">Direct</option>
+                                          </select><button type="button" class="btn dropdown-toggle btn-light bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox" aria-expanded="false" data-id="kt_datatable_search_type" title="All"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">All</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-2" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-3 col-xl-4 mt-5 mt-lg-0">
+                              <a href="#" class="btn btn-light-primary px-6 font-weight-bold">Search</a>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!--begin: Datatable-->
+                  <div class="datatable datatable-bordered datatable-head-custom datatable-default datatable-primary datatable-loaded" id="kt_datatable">
+                      <table class="datatable-table pl-4" style="display: block;">
+                         <thead class="datatable-head">
+                            <tr class="datatable-row" style="left: 0px;">
+                               <th data-field="RecordID" class="datatable-cell-center datatable-cell datatable-cell-check"><span style="width: 20px;"><label class="checkbox checkbox-single checkbox-all"><input type="checkbox">&nbsp;<span></span></label></span></th>
+                               <th data-field="Item" class="datatable-cell datatable-cell-sort"><span style="width: 50px;">S.No</span></th>
+                               <th data-field="numbers" class="datatable-cell datatable-cell-sort"><span style="width: 110px;">Title</span></th>
+                               <th data-field="remaining" class="datatable-cell datatable-cell-sort"><span style="width: 110px;">Quantity Type</span></th>
+                               <th data-field="remaining" class="datatable-cell datatable-cell-sort"><span style="width: 110px;">Spended</span></th>
+                               <th data-field="actions" data-autohide-disabled="false" class="datatable-cell-left datatable-cell datatable-cell-sort"><span style="width: 125px;">Actions</span></th>
+                            </tr>
+                         </thead>
+                         <tbody class="datatable-body">
+                          <ng-container *ngFor="let item of Expencive; let i = index;">
+
+                            <tr data-row="0" class="datatable-row" style="left: 0px;">
+
+                               <td class="datatable-cell-center datatable-cell datatable-cell-check" data-field="RecordID" aria-label="1"><span style="width: 20px;"><label class="checkbox checkbox-single"><input type="checkbox" value="1">&nbsp;<span></span></label></span></td>
+                               <td data-field="Item" aria-label="64616-103" class="datatable-cell"><span style="width: 50px;">#{{i+1}}</span></td>
+                               <td data-field="Item" aria-label="64616-103" class="datatable-cell"><span style="width: 110px;">{{item.Stock_name}}</span></td>
+                               <td data-field="numbers" aria-label="Brazil" class="datatable-cell"><span style="width: 110px;">{{item.Stock_qtn_type}}</span></td>
+                               <td data-field="numbers" aria-label="Brazil" class="datatable-cell"><span style="width: 110px;">{{item.Stock_Spend}}</span></td>
+                               <td class="datatable-cell-left datatable-cell" data-field="Actions" data-autohide-disabled="false" aria-label="null">
+                                  <span style="overflow: visible; position: relative; width: 125px;">
+
+                                     <a href="javascript:;" class="btn btn-sm btn-clean btn-icon" title="Delete">
+                                        <span class="svg-icon svg-icon-md" (click)="Deleteexpensive(i)">
+                                           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                              <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                 <rect x="0" y="0" width="24" height="24"></rect>
+                                                 <path d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z" fill="#000000" fill-rule="nonzero"></path>
+                                                 <path d="M14,4.5 L14,4 C14,3.44771525 13.5522847,3 13,3 L11,3 C10.4477153,3 10,3.44771525 10,4 L10,4.5 L5.5,4.5 C5.22385763,4.5 5,4.72385763 5,5 L5,5.5 C5,5.77614237 5.22385763,6 5.5,6 L18.5,6 C18.7761424,6 19,5.77614237 19,5.5 L19,5 C19,4.72385763 18.7761424,4.5 18.5,4.5 L14,4.5 Z" fill="#000000" opacity="0.3"></path>
+                                              </g>
+                                           </svg>
+                                        </span>
+                                     </a>
+                                  </span>
+                               </td>
+                            </tr>
+
+                            </ng-container>
+
+
+                         </tbody>
+                      </table>
+                   </div>
+                  <!--end: Datatable-->
+              </div>
+          </div>
+          <!--end::Card-->
+
+      </div>
+      <!--end::Container-->
+  </div>
+  <!--end::Entry-->
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+<!--end::Wrapper-->
+</div>
+<app-footer></app-footer>
+<!--end::Page-->
+</div>
+<!--end::Main-->
+
+</div>

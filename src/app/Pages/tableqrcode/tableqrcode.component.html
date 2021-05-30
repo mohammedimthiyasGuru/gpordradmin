@@ -1,0 +1,53 @@
+
+
+<div class="content d-flex flex-column flex-column-fluid" id="kt_content" >
+
+  <div class="card card-custom gutter-b example example-compact">
+    <form class="form">
+              <div class="card-body pb-0">
+                  <div class="mb-15">
+                      <div class="form-group row">
+                          <label class="col-lg-3 col-form-label">Table Number:</label>
+                          <div class="col-lg-6">
+                              <input type="number" class="form-control" name="table_name" value="" [(ngModel)]="table_name"  placeholder="Please enter your table number">
+                              <span class="form-text text-muted">Please enter your table number</span>
+                          </div>
+                          <div class="col-lg-3">
+                            <button class="btn btn-success" (click)="createtable()">Create table</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </form>
+        </div>
+
+
+  <div class="d-flex flex-column-fluid">
+      <div class="container pt-6 pt-lg-10" >
+          <div class="row">
+            <ng-container *ngFor="let item of orderlist; let i = index;">
+
+              <div class="col-lg-6 col-xl-3 mb-5">
+                  <div class="card card-custom card-stretch">
+                      <div class="card-header cus pl-4">
+                          <div class="card-title cus">
+                            <div style="text-align: center;margin-left: 5px;"><button class="btn btn-success" (click)="printComponent(i)" >Print QR</button></div>
+                            <div style="text-align: center;margin-left: 5px;"><button class="btn btn-fail" (click)="delete(item._id)" >Delete</button></div>
+                          </div>
+                      </div>
+                      <div class="card-body" class="container" id="{{i}}">
+                          <div class="cus-det pt-4">
+                            <div style="text-align: center;"><h6 class="card-label cus left">Table Number : #{{item.table_name}}</h6></div>
+                              <div style="text-align: center;"><ngx-qrcode element-type="url" [value]="item.table_link"></ngx-qrcode></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+              </ng-container>
+          </div>
+      </div>
+  </div>
+</div>
+
