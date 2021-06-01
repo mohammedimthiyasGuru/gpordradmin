@@ -1,0 +1,168 @@
+
+  <div class="container pt-10 pt-lg-10" style="min-height:93vh">
+    <div class="row">
+    <div class="col-lg-12">
+      <!--begin::Card-->
+      <div class="card card-custom gutter-b example example-compact">
+          <div class="card-header">
+              <h3 class="card-title">Menu Setting</h3>
+          </div>
+          <!--begin::Form-->
+          <form class="form">
+              <div class="card-body pb-0">
+                  <div class="mb-10">
+
+                    <div class="form-group row">
+                        <div class="col-md-2">
+                            <h4>Menu title :</h4>
+                         </div>
+                         <div class="col-md-8">
+                             <input  class="form-control" type="text">
+                          </div>
+                    </div>
+
+                    <div class="form-group row">
+                      <div class="col-xl-1 col-md-2">
+                        <h4>Time</h4>
+                      </div>
+                      <div class="col-md-auto pl-md-0">
+                        <input type="radio" id="male" value="1" [(ngModel)]="times" name="times" (change)="onchangetime($event.target.value)">
+                        <label for="male" style="padding-left: 10px;"> 06 : 00 am - 12 : 00 pm</label><br>
+                      </div>
+                      <div class="col-md-auto pl-md-0">
+                        <input type="radio" id="female" value="2" [(ngModel)]="times" name="times" (change)="onchangetime($event.target.value)">
+                        <label for="female" style="padding-left: 10px;"> 12 : 00 pm - 09 : 00 pm</label><br>
+                      </div>
+                      <div class="col-md-auto pl-md-0">
+                        <div class="row">
+                          <div class="col-lg-12 pl-0"><input type="radio" id="others"  value="3"  [(ngModel)]="times" name="times"   (change)="onchangetime($event.target.value)">
+                          <label for="others" style="padding-left: 10px;">Others</label><br></div>
+                          <div class="col-md-12 mb-3 pl-0" *ngIf="other_time_visible == true">
+                            <select class="form-control form-control-solid" name="other_start_time" value="" [(ngModel)]="item_time_start">
+                            <option value="00:00">00:00</option>
+                            <option value="01:00">01:00</option>
+                            <option value="02:00">02:00</option>
+                            <option value="03:00">03:00</option>
+                            <option value="04:00">04:00</option>
+                            <option value="05:00">05:00</option>
+                            <option value="06:00">06:00</option>
+                            <option value="07:00">07:00</option>
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                            <option value="21:00">21:00</option>
+                            <option value="22:00">22:00</option>
+                            <option value="23:00">23:00</option>
+                           </select></div>
+                          <div class="col-md-12 pl-0" *ngIf="other_time_visible == true">
+                            <select class="form-control form-control-solid" name="other_end_time" value="" [(ngModel)]="item_time_end">
+                            <option value="00:00">00:00</option>
+                            <option value="01:00">01:00</option>
+                            <option value="02:00">02:00</option>
+                            <option value="03:00">03:00</option>
+                            <option value="04:00">04:00</option>
+                            <option value="05:00">05:00</option>
+                            <option value="06:00">06:00</option>
+                            <option value="07:00">07:00</option>
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                            <option value="20:00">20:00</option>
+                            <option value="21:00">21:00</option>
+                            <option value="22:00">22:00</option>
+                            <option value="23:00">23:00</option>
+                           </select></div>
+                        </div>
+                      </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-xl-1 col-md-2">
+                      <h4>Days</h4>
+                    </div>
+                    <div class="col-md-auto pl-md-0">
+                      <input type="radio" id="male1"  value="4" [(ngModel)]="dates" name="dates" (change)="onchangeday($event.target.value)">
+                        <label for="male1" style="padding-left: 10px;">All 7 days</label><br>
+                    </div>
+                    <div class="col-md-auto pl-md-0">
+                      <input type="radio" id="female2"  value="5" [(ngModel)]="dates" name="dates" (change)="onchangeday($event.target.value)">
+                        <label for="female2" style="padding-left: 10px;">Monday - Friday</label><br>
+                    </div>
+  
+                    <div class="col-md-auto pl-md-0">
+                      <div class="col-md-12 pl-0"><input type="radio" id="others3"  value="6" [(ngModel)]="dates" name="dates" (change)="onchangeday($event.target.value)">
+                        <label for="others3" style="padding-left: 10px;">Others</label><br></div>
+                        <label class="col-md-12 pl-0 col-form-label"  *ngIf = "other_dates_visible == true">Select Day :</label>
+                        <div class="col-md-12 pl-0 pr-0" *ngIf = "other_dates_visible == true">
+                          <input type="checkbox" id="cmon" name="imon" [(ngModel)]="imon" value="" (change)="onsingleday($event.target.value,1)">
+                          <label for="Monday" class="ml-2">Monday</label><br>
+                          <input type="checkbox" id="ctue" name="itue" value="" [(ngModel)]="itue" (change)="onsingleday($event.target.value,2)">
+                          <label for="Tuesday" class="ml-2">Tuesday</label><br>
+                          <input type="checkbox" id="cwed" name="iwed" value="" [(ngModel)]="iwed" (change)="onsingleday($event.target.value,3)">
+                          <label for="Wednesday" class="ml-2">Wednesday</label><br>
+                          <input type="checkbox" id="cthu" name="ithu" value="" [(ngModel)]="ithu" (change)="onsingleday($event.target.value,4)">
+                          <label for="Thursday" class="ml-2">Thursday</label><br>
+                          <input type="checkbox" id="cfri" name="ifri" value="" [(ngModel)]="ifri" (change)="onsingleday($event.target.value,5)">
+                          <label for="Friday" class="ml-2">Friday</label><br>
+                          <input type="checkbox" id="cstr" name="istr" value="" [(ngModel)]="istr" (change)="onsingleday($event.target.value,6)">
+                          <label for="Saturday" class="ml-2">Saturday</label><br>
+                          <input type="checkbox" id="csun" name="isun" value="" [(ngModel)]="isun" (change)="onsingleday($event.target.value,7)">
+                          <label for="Sunday" class="ml-2">Sunday</label><br>
+                            <span class="form-text text-muted">Please selet your days</span>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <ng-container *ngFor="let item of final_datas; let i = index;">
+                      <div class="col-lg-auto col-6 col-md-3 pl-0 mt-8"    style="width: 20%;">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <h4>{{item.Cat_name}}</h4>
+                          </div>
+                          <br>
+                          <ng-container *ngFor="let items of item.Item_details; let j = index;">
+                            <div class="col-lg-12">
+                              <input type="checkbox" id="ctue" name="itue" value="" (change)="Selecteditems(items.item_name,items.item_id)">
+                              <label for="Tuesday" style="padding-left: 10px;">{{items.item_name}}</label><br>
+                            </div>
+                            </ng-container>
+                        </div>
+                     </div>
+                      </ng-container>
+                      </div>
+  
+  
+                  <div class="row">
+                   <div class="col-lg-3">
+                    <div class="row">
+                        <button (click)="updateaction()" class="btn btn-success mr-2">Update Menu</button>
+                    </div>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+          </form>
+      </div>
+    </div>
+    </div>
+    </div>
+  

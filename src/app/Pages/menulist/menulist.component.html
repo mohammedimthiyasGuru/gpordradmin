@@ -1,0 +1,84 @@
+<div class="container pt-5 pt-lg-0">
+    <div class="row mt-lg-15">
+      <div class="col-lg-12 p-0">
+      <div class="card card-custom gutter-b example example-compact p-5 mb-lg-0">
+      <div class="row">
+          <div class="col-md-9">
+            <h3 class="mb-0">Menu Setting</h3>
+          </div>
+          <div class="col-md-3">
+            <a href="/#/ordr/vendor/addmenu" class="btn btn-light-primary px-6 font-weight-bold">Create New Menu Setting</a>
+          </div>
+      </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+<div class="content d-flex flex-column flex-column-fluid pt-lg-0" id="kt_content">
+<!--begin::Entry-->
+<div class="d-flex flex-column-fluid">
+<!--begin::Container-->
+<div class="container">
+<!--begin::Card-->
+<div class="card card-custom gutter-b">
+    <div class="card-header flex-wrap border-0 pt-6 pb-0">
+    </div>
+    <div class="card-body">
+        <!--begin: Datatable-->
+        <div class="datatable datatable-bordered datatable-head-custom datatable-default datatable-primary datatable-loaded" id="kt_datatable">
+            <table class="datatable-table pl-4" style="display: block;">
+               <thead class="datatable-head">
+                  <tr class="datatable-row" style="left: 0px;">
+                     <th data-field="RecordID" class="datatable-cell-center datatable-cell datatable-cell-check"><span style="width: 20px;"><label class="checkbox checkbox-single checkbox-all"><input type="checkbox">&nbsp;<span></span></label></span></th>
+                     <th data-field="numbers" class="datatable-cell datatable-cell-sort"><span style="width: 110px;">Menu title</span></th>
+                     <th data-field="Item" class="datatable-cell datatable-cell-sort"><span style="width: 110px;">Menu time</span></th>
+                     <th data-field="numbers" class="datatable-cell datatable-cell-sort"><span style="width: 110px;">Menu Days</span></th>
+                     <th data-field="remaining" class="datatable-cell datatable-cell-sort"><span style="width: 110px;">Item Details</span></th>
+                     <th data-field="numbers" class="datatable-cell datatable-cell-sort"><span style="width: 110px;">Last updated Date</span></th>
+                     <th data-field="actions" data-autohide-disabled="false" class="datatable-cell-left datatable-cell datatable-cell-sort"><span style="width: 125px;">Actions</span></th>
+                  </tr>
+               </thead>
+               <tbody class="datatable-body">
+                <ng-container *ngFor="let item of orderlist; let i = index;">
+                  <tr data-row="0" class="datatable-row" style="left: 0px;">
+
+                     <td class="datatable-cell-center datatable-cell datatable-cell-check" data-field="RecordID" aria-label="1"><span style="width: 20px;"><label class="checkbox checkbox-single"><input type="checkbox" value="1">&nbsp;<span></span></label></span></td>
+                     <td data-field="Item" aria-label="64616-103" class="datatable-cell"><span style="width: 110px;">{{item.vendor_id.shop_name}}</span></td>
+                     <td data-field="numbers" aria-label="Brazil" class="datatable-cell"><span style="width: 110px;">#{{item.Booking_id}}</span></td>
+                     <td data-field="numbers" aria-label="Brazil" class="datatable-cell"><span style="width: 110px;">{{item.Customer_id.Customer_name}} - {{item.Customer_id.Customer_phone}}</span></td>
+                     <td data-field="numbers" aria-label="Brazil" class="datatable-cell"><span style="width: 110px;">{{item.Total_amount}}</span></td>
+                     <td data-field="numbers" aria-label="Brazil" class="datatable-cell"><span style="width: 110px;">{{item.Payment_id}}</span></td>
+                     <td data-field="numbers" aria-label="Brazil" class="datatable-cell"><span style="width: 110px;">{{item.createdAt | date:'yyyy-MM-dd HH:MM'}}</span></td>
+                     <td class="datatable-cell-left datatable-cell" data-field="Actions" data-autohide-disabled="false" aria-label="null">
+                        <span style="overflow: visible; position: relative; width: 125px;">
+                           <a  (click)="openorders(item)" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit order">
+                              <span class="svg-icon svg-icon-md">
+                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                       <rect x="0" y="0" width="24" height="24"></rect>
+                                       <path d="M8,17.9148182 L8,5.96685884 C8,5.56391781 8.16211443,5.17792052 8.44982609,4.89581508 L10.965708,2.42895648 C11.5426798,1.86322723 12.4640974,1.85620921 13.0496196,2.41308426 L15.5337377,4.77566479 C15.8314604,5.0588212 16,5.45170806 16,5.86258077 L16,17.9148182 C16,18.7432453 15.3284271,19.4148182 14.5,19.4148182 L9.5,19.4148182 C8.67157288,19.4148182 8,18.7432453 8,17.9148182 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000000, 10.707409) rotate(-135.000000) translate(-12.000000, -10.707409) "></path>
+                                       <rect fill="#000000" opacity="0.3" x="5" y="20" width="15" height="2" rx="1"></rect>
+                                    </g>
+                                 </svg>
+                              </span>
+                           </a>
+                        </span>
+                     </td>
+                  </tr>
+                  </ng-container>
+               </tbody>
+            </table>
+         </div>
+        <!--end: Datatable-->
+    </div>
+</div>
+<!--end::Card-->
+
+</div>
+<!--end::Container-->
+</div>
+<!--end::Entry-->
+</div>
+
+

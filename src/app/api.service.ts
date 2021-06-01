@@ -44,6 +44,10 @@ export class ApiService {
     return this.http.post(this.apiUrl + 'orderdetails/edit', data);
   }
 
+  expensive_update(data) {
+    return this.http.post(this.apiUrl + 'expensivemng/update/expensive', data);
+  }
+
 
   user_delete(id) {
     return this.http.post(this.apiUrl + 'userdetails/delete', id);

@@ -51,6 +51,23 @@ export class ViewSingleOrderComponent implements OnInit {
                 }
                 if(a == this.item_list.length - 1){
                   console.log(arrays);
+                  this.update_expensive(arrays);
+                  let a = {
+                    _id : this.order_details._id,
+                    order_status :  this.status
+                  }
+                  console.log(a);
+                  this._api.orders_update(a).subscribe(
+                   (response: any) => {
+                     console.log(response.Data);
+                     // this.storage.local.set('order_details',response.Data);
+                     this.toastr.clear();
+                     this.toastr.success("Status Updated")
+                     this.router.navigateByUrl('/ordr/vendor/orderlist');
+                   }
+                 );
+
+
                 }
        }
     }
@@ -72,5 +89,17 @@ export class ViewSingleOrderComponent implements OnInit {
 
   }
 
+  }
+
+
+  update_expensive(arrays){
+    let a  = { 
+      data : arrays
+    }
+    this._api.expensive_update(a).subscribe(
+      (response: any) => {
+        console.log(response.Data);
+      }
+    );
   }
 }

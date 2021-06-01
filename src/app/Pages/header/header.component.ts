@@ -24,10 +24,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.vendor_details = this.storage.local.get('vendor_details');
-    console.log(this.vendor_details);
 
     let login_status = this.storage.local.get('login_status');
-    console.log(login_status);
     if(login_status == null){
       this.show_visible = false;
     }else{
@@ -47,12 +45,10 @@ export class HeaderComponent implements OnInit {
 }
     this._api.notification_list(c).subscribe(
       (response: any) => {
-        console.log('response',response);
         this.notification_list  = response.Data.notification_list;
         // this.vendor_details = this.storage.local.get('vendor_details');
         this.shop_logo = this.vendor_details.shop_logo;
         this.shop_name = this.vendor_details.shop_name;
-        console.log(this.notification_list);
       }
       );
   }

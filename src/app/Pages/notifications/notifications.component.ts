@@ -22,7 +22,6 @@ export class NotificationsComponent implements OnInit {
     private _api: ApiService,
   ) {
     this.vendor_details = this.storage.local.get('vendor_details');
-    console.log(this.vendor_details);
     this.audio.src = "../../../assets/notification.mp3";
     clearInterval(this.interval);
     this.timeLeft = 5;
@@ -34,15 +33,11 @@ export class NotificationsComponent implements OnInit {
     this.interval = setInterval(() => {
       if(this.timeLeft > 0) {
         this.timeLeft--;
-        console.log(this.timeLeft);
-        console.log(this.notification_count);
         if(this.notification_count !== 0){
           this.call_continue();
-          console.log('calling');
           this.ngOnInit();
         }else{
           this.pauseTimer();
-          console.log('calling');
           this.ngOnInit();
         }
       } else {
@@ -74,9 +69,7 @@ export class NotificationsComponent implements OnInit {
           }
           this._api.notification_list(c).subscribe(
             (response: any) => {
-              // console.log('response',response);
               this.notification_list  = response.Data.notification_list;
-              console.log(this.notification_list);
               this.notification_count = this.notification_list.length;
               if(this.notification_count !== 0 ){
                this.notification_show = true;

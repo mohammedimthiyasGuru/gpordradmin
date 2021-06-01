@@ -49,6 +49,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { ToastrModule } from 'ngx-toastr';
 import { NotificationListComponent } from './Pages/notification-list/notification-list.component';
 import { TableqrcodeComponent } from './Pages/tableqrcode/tableqrcode.component';
+import { CreatemenusettingComponent } from './Pages/createmenusetting/createmenusetting.component';
+import { MenulistComponent } from './Pages/menulist/menulist.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +87,8 @@ import { TableqrcodeComponent } from './Pages/tableqrcode/tableqrcode.component'
     MenusettingComponent,
     NotificationListComponent,
     TableqrcodeComponent,
+    CreatemenusettingComponent,
+    MenulistComponent,
   ],
   imports: [
     BrowserModule,

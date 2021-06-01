@@ -30,6 +30,8 @@ import { MenusettingComponent } from './Pages/menusetting/menusetting.component'
 import * as moment from 'moment';
 import { NotificationListComponent } from './Pages/notification-list/notification-list.component';
 import { TableqrcodeComponent } from './Pages/tableqrcode/tableqrcode.component';
+import { CreatemenusettingComponent } from './Pages/createmenusetting/createmenusetting.component';
+import { MenulistComponent } from './Pages/menulist/menulist.component';
 
 const routes: Routes = [
   {path: '', component: LoginpageComponent},
@@ -68,6 +70,10 @@ const routes: Routes = [
   {path: 'ordr/vendor/menusetting', component: MenusettingComponent},
 
   {path: 'ordr/vendor/tableqr', component: TableqrcodeComponent},
+
+  {path: 'ordr/vendor/addmenu', component: CreatemenusettingComponent},
+  {path: 'ordr/vendor/menulist', component: MenulistComponent},
+
 
 
 ];
